@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    
+</head>
+<body>
+
+    <main class="app">
+        <header class="topo">
+            <div>
+                <p class="etiqueta">ORGANIZAÇÃO PESSOAL</p>
+                <h1>Minha lista de tarefas</h1>
+                <p class="subtitulo">
+                    Organize seu dia, uma tarefa de cada vez.
+                </p>
+            </div>
+
+            <span class="icone-topo">✓</span>
+        </header>
+
+        <section class="painel">
+
+            <form id="form-tarefa" class="form-tarefa">
+                <input
+                    id="entrada-tarefa"
+                    type="text"
+                    placeholder="O que você precisa fazer?"
+                    maxlength="120"
+                    required
+                >
+
+                <button type="submit" class="botao-adicionar">
+                    + Adicionar
+                </button>
+            </form>
+
+            <div class="resumo">
+                <div>
+                    <span id="contador-pendentes">
+                        0 tarefas pendentes
+                    </span>
+
+                    <div class="barra">
+                        <span id="progresso"></span>
+                    </div>
+                </div>
+
+                <span id="contador-concluidas" class="concluidas">
+                    0 concluídas
+                </span>
+            </div>
+
+            <div class="filtros">
+                <button class="filtro ativo" data-filtro="todas">
+                    Todas
+                </button>
+
+                <button class="filtro" data-filtro="pendentes">
+                    Pendentes
+                </button>
+
+                <button class="filtro" data-filtro="concluidas">
+                    Concluídas
+                </button>
+            </div>
+
+            <ul id="lista-tarefas" class="lista-tarefas"></ul>
+
+            <p id="mensagem-vazia" class="mensagem-vazia">
+                Sua lista está vazia. Adicione uma tarefa para começar!
+            </p>
+
+        </section>
+
+        <footer>
+            Feito para deixar sua rotina mais simples ✨
+        </footer>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
